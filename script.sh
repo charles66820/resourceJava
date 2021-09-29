@@ -19,7 +19,7 @@ java -cp ${RES_DIR}:${DIST_CLASS} Main
 if [ $? != 0 ]; then exit 1; fi
 
 echo -e "\nMake jar executable..."
-mkdir ${DIST_BIN}
+mkdir -p ${DIST_BIN}
 jar cvfm ${DIST_BIN}/$BIN_NAME MANIFEST.MF -C ${DIST_CLASS} . -C $RES_DIR .
 if [ $? != 0 ]; then exit 1; fi
 
