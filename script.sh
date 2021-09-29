@@ -6,6 +6,8 @@ DIST_BIN=${PROJECT_ROOT}/dist/${ENV}/bin
 RES_DIR=${PROJECT_ROOT}/src/res
 BIN_NAME=Test.jar
 
+mkdir -p ${DIST_CLASS}
+
 echo -e "\nCompiling..."
 find ${SRC_JAVA}/ -name "*.java" > sources.txt
 javac @sources.txt -d ${DIST_CLASS}
